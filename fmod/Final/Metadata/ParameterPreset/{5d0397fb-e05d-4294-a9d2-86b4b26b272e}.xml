@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{5d0397fb-e05d-4294-a9d2-86b4b26b272e}">
+		<property name="name">
+			<value>Turning</value>
+		</property>
+		<relationship name="folder">
+			<destination>{88de1b7b-9663-417c-873a-35be5d259018}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{868a996b-10ac-48f4-b273-6aa81e82d3c9}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{868a996b-10ac-48f4-b273-6aa81e82d3c9}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Off</value>
+			<value>Slow</value>
+			<value>Fast</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

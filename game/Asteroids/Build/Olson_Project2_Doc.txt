@@ -1,0 +1,24 @@
+All assets created by Cameron Olson.
+
+Controls:
+
+Use W to accelerate and S to decelerate.
+A turns counterclockwise and D turns clockwise.
+Q and E slowly turn counterclockwise and clockwise, respectively, almost as if to "nudge" the ship for better aim.
+Space fires a bullet and advances menus.
+
+Gameplay:
+
+Asteroid speed and spawn rate start slow and increase slightly with every small asteroid you destroy.
+Getting hit will cost you a life, and give you 3 seconds of invulnerability to recover (shown by your ship flashing red).
+Breaking a large asteroid into smaller ones gets you 10 points, and destroying the smaller asteroids gets you 20.
+
+Extra Features (Above and Beyond):
+
+Aesthetic particle systems for thrusters, explosions, and projectiles.
+Menu and game over screens.
+Invulnerability/Recovery period upon being hit.
+Gradually increasing difficulty as gameplay goes on.
+UI that scales to screen and doesn't make me rip my hair out because my laptop is 4k and Unity makes everything tiny but only in the builds (more a feature for me than anything else).
+
+Original project uploaded on the 16th. Current build uploaded on the 22nd for additional features and better documentation.
