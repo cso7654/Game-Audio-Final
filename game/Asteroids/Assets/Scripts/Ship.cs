@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class Ship : MonoBehaviour {
 
@@ -26,6 +27,9 @@ public class Ship : MonoBehaviour {
     public GameObject collisionManager;
     public GameObject gui;
 
+    public StudioEventEmitter orientationFMOD;
+    public StudioEventEmitter thrusterFMOD;
+
     public bool invincible;
     float flickerTimer;
 
@@ -37,6 +41,7 @@ public class Ship : MonoBehaviour {
         acceleration = new Vector3(0, 0);
         thrusters = gameObject.GetComponentInChildren<ParticleSystem>();
         thrusters.Stop();
+        //fmodEmitter = GetComponent<StudioEventEmitter>();
 	}
 	
 	// Update is called once per frame
@@ -88,21 +93,37 @@ public class Ship : MonoBehaviour {
 
     void Turning()
     {
-        if (Input.GetKey(KeyCode.D))
-        {
-            direction = Quaternion.Euler(0, 0, -turnSpeed) * direction;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            direction = Quaternion.Euler(0, 0, turnSpeed) * direction;
-        }
+        int turnVal = 0;
+
         if (Input.GetKey(KeyCode.E))
         {
+            turnVal = 1;
             direction = Quaternion.Euler(0, 0, -turnSpeed / 2) * direction;
         }
         if (Input.GetKey(KeyCode.Q))
         {
+            turnVal = 1;
             direction = Quaternion.Euler(0, 0, turnSpeed / 2) * direction;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            turnVal = 2;
+            direction = Quaternion.Euler(0, 0, -turnSpeed) * direction;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            turnVal = 2;
+            direction = Quaternion.Euler(0, 0, turnSpeed) * direction;
+        }
+
+        orientationFMOD.SetParameter("Turning", turnVal);
+
+        if (orientationFMOD.IsPlaying() && turnVal == 0)
+        {
+            orientationFMOD.Stop();
+        }else if (!orientationFMOD.IsPlaying() && turnVal > 0)
+        {
+            orientationFMOD.Play();
         }
     }
 
@@ -113,6 +134,10 @@ public class Ship : MonoBehaviour {
             speed += deltaSpeed;
             accelerationDirection = direction;
             thrusters.Play();
+            if (!thrusterFMOD.IsPlaying())
+            {
+                thrusterFMOD.Play();
+            }
             ParticleSystem.ShapeModule shape = thrusters.shape;
             shape.rotation = new Vector3(0, 0);
         }
@@ -121,6 +146,10 @@ public class Ship : MonoBehaviour {
             speed -= deltaSpeed;
             accelerationDirection = direction;
             thrusters.Play();
+            if (!thrusterFMOD.IsPlaying())
+            {
+                thrusterFMOD.Play();
+            }
             ParticleSystem.ShapeModule shape = thrusters.shape;
             shape.rotation = new Vector3(180, 0);
         }
@@ -128,6 +157,7 @@ public class Ship : MonoBehaviour {
         if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S))
         {
             thrusters.Stop();
+            thrusterFMOD.Stop();
         }
     }
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class SpawnAsteroid : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class SpawnAsteroid : MonoBehaviour
     float fieldWidth;
     float fieldHeight;
     Vector2 fieldCenter;
+
+    public StudioEventEmitter breakFMOD;
 
     public GameObject collisionManager;
     public GameObject gui;
@@ -58,6 +61,7 @@ public class SpawnAsteroid : MonoBehaviour
             astBehavior.collisionManager = collisionManager;
             astBehavior.gui = gui;
             astBehavior.asteroidSpawner = gameObject;
+            astBehavior.breakFMOD = breakFMOD;
 
             collisionManager.GetComponent<CollisionDetection>().objects.Add(asteroid);
 

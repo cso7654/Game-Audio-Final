@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class Asteroid : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class Asteroid : MonoBehaviour
     public GameObject collisionManager;
     public GameObject asteroidSpawner;
     public GameObject explosionParticles;
+
+    public StudioEventEmitter breakFMOD;
 
     public int stage = 0;
 
@@ -57,6 +60,8 @@ public class Asteroid : MonoBehaviour
         if (split)
         {
             split = false;
+
+            breakFMOD.Play();
 
             //Create two smaller asteroids
             GameObject ast1 = Instantiate(gameObject);

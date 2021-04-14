@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{cf99f5b0-7e6f-45c2-99fd-6c4060b7c2f6}">
+		<property name="assetPath">
+			<value>Main Thrusters Loop.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.43637188208616778</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c3aab086-b964-4c1d-92a4-a5790eb5881b}</destination>
+		</relationship>
+	</object>
+</objects>
