@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
+
+    public GameObject startSoundObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +20,7 @@ public class StartButton : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             SceneManager.LoadScene("Game");
+            startSoundObject.GetComponent<FMODUnity.StudioEventEmitter>().Play();
         }
     }
 }

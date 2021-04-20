@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class Score : MonoBehaviour
 {
     int points;
+    
+    public int scoreMilestone;
+    public StudioEventEmitter scoreMilestoneFMOD;
 
     public int Points
     {
@@ -14,7 +18,13 @@ public class Score : MonoBehaviour
         }
         set
         {
+            int prevPoints = points;
             points = value;
+            if (Mathf.Floor(prevPoints / scoreMilestone) < Mathf.Floor(points / scoreMilestone))
+            {
+                //Score milestone reached, play sound
+                scoreMilestoneFMOD.Play();
+            }
         }
     }
 

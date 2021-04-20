@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{84feca99-43f2-49bb-87db-4fbca38522df}">
+		<property name="assetPath">
+			<value>Asteroid Destroy.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.6958503401360544</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c3aab086-b964-4c1d-92a4-a5790eb5881b}</destination>
+		</relationship>
+	</object>
+</objects>

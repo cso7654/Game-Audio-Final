@@ -17,6 +17,7 @@ public class Asteroid : MonoBehaviour
     public GameObject explosionParticles;
 
     public StudioEventEmitter breakFMOD;
+    public StudioEventEmitter destroyFMOD;
 
     public int stage = 0;
 
@@ -61,8 +62,6 @@ public class Asteroid : MonoBehaviour
         {
             split = false;
 
-            breakFMOD.Play();
-
             //Create two smaller asteroids
             GameObject ast1 = Instantiate(gameObject);
             ast1.transform.localScale = new Vector3(0.15f, 0.15f, 1);
@@ -97,15 +96,18 @@ public class Asteroid : MonoBehaviour
     public void Break()
     {
         //Create explosion
-        GameObject explosion = Instantiate(explosionParticles, gameObject.transform);
-        explosion.GetComponent<ParticleSystem>().Play();
+        GameObject explosion = Instantiate(explosionParticles, asteroidSpawner.transform);
         explosion.transform.position = gameObject.transform.position;
+        explosion.GetComponent<ParticleSystem>().Play();
 
         if (stage == 0)
         {
             //Big asteroid
 
             split = true;
+
+            //Play sound
+            breakFMOD.Play();
 
             //Increase score by 10
             gui.GetComponent<Score>().Points += 10;
@@ -118,6 +120,9 @@ public class Asteroid : MonoBehaviour
 
             //Increase score by 20
             gui.GetComponent<Score>().Points += 20;
+
+            //Play sound
+            destroyFMOD.Play();
 
             //Increase asteroid spawn rate and speed
             asteroidSpawner.GetComponent<SpawnAsteroid>().timeBetweenSpawns -= 0.05f;

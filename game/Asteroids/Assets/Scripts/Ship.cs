@@ -17,6 +17,8 @@ public class Ship : MonoBehaviour {
     public float deceleration = 0.5f;
     public float turnSpeed = 4f;
 
+    public float health = 1f;
+
     public GameObject bulletPrefab;
     public float bulletsPerSecond;
     public float timeSinceLastFire;
@@ -29,6 +31,7 @@ public class Ship : MonoBehaviour {
 
     public StudioEventEmitter orientationFMOD;
     public StudioEventEmitter thrusterFMOD;
+    public StudioEventEmitter ambientCreakFMOD;
 
     public bool invincible;
     float flickerTimer;
@@ -49,6 +52,8 @@ public class Ship : MonoBehaviour {
         Turning();
 
         Acceleration();
+
+        ambientCreakFMOD.SetParameter("Health", health);
 
         if (speed > maxSpeed)
         {
@@ -129,6 +134,8 @@ public class Ship : MonoBehaviour {
 
     void Acceleration()
     {
+        thrusterFMOD.SetParameter("Health", health);
+
         if (Input.GetKey(KeyCode.W))
         {
             speed += deltaSpeed;

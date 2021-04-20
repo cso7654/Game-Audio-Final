@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{12440773-ccf7-4d14-bcfb-00e9fcdc3b7b}">
+	<object class="AudioFile" id="{3ca90493-baf1-43d4-b755-dca716d4f0ca}">
 		<property name="assetPath">
-			<value>Metal Damage.wav</value>
+			<value>Generic Input.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.6984580498866213</value>
+			<value>0.5</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{c3aab086-b964-4c1d-92a4-a5790eb5881b}</destination>

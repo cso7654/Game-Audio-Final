@@ -17,6 +17,7 @@ public class SpawnAsteroid : MonoBehaviour
     Vector2 fieldCenter;
 
     public StudioEventEmitter breakFMOD;
+    public StudioEventEmitter destroyFMOD;
 
     public GameObject collisionManager;
     public GameObject gui;
@@ -62,6 +63,7 @@ public class SpawnAsteroid : MonoBehaviour
             astBehavior.gui = gui;
             astBehavior.asteroidSpawner = gameObject;
             astBehavior.breakFMOD = breakFMOD;
+            astBehavior.destroyFMOD = destroyFMOD;
 
             collisionManager.GetComponent<CollisionDetection>().objects.Add(asteroid);
 
