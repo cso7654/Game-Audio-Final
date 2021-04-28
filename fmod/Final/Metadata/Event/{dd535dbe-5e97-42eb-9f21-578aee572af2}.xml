@@ -8,7 +8,7 @@
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{80ebaf76-dd9f-4e7f-ab82-b4b1fa99d628}</destination>
+			<destination>{3d4beb59-f536-4a3a-bebe-98f843bf7b0c}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{7b42d769-fa53-42b1-a9cc-eaee929f08fa}</destination>
@@ -56,7 +56,7 @@
 			<destination>{bf5fd886-30e3-4e65-9f74-43c0d05a4077}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{385fe4c6-94b6-429d-ad6b-79fc258072ce}</destination>
+			<destination>{5843fcc1-541a-496d-8d24-f7a4bce11704}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{2cfe8251-e291-4a15-8e89-b5d86ce324a8}" />
@@ -320,7 +320,7 @@
 	<object class="MixerBusFader" id="{cda6b88f-25a7-4558-8d39-e730f05c078f}" />
 	<object class="SFXReverbEffect" id="{5fa67542-28ae-4094-864b-ffcd05cf36ee}">
 		<property name="decayTime">
-			<value>3300</value>
+			<value>220</value>
 		</property>
 		<property name="HFDecayRatio">
 			<value>23.5</value>
@@ -329,7 +329,7 @@
 			<value>780</value>
 		</property>
 		<property name="highCut">
-			<value>1150</value>
+			<value>320</value>
 		</property>
 		<property name="earlyLateMix">
 			<value>19</value>
@@ -354,7 +354,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>24</value>
+			<value>34</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{f462eb35-69ce-40b3-b698-bc5b8178b69b}">
@@ -370,7 +370,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>24</value>
+			<value>34</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{4091f854-5035-423a-8701-0c3e1d4b5265}">

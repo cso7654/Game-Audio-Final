@@ -24,7 +24,8 @@ public class Ship : MonoBehaviour {
     public float timeSinceLastFire;
     public float bulletSpeed;
 
-    public ParticleSystem thrusters;
+    public ParticleSystem thrusterParticles;
+    public ParticleSystem orientationParticles;
 
     public GameObject collisionManager;
     public GameObject gui;
@@ -42,8 +43,8 @@ public class Ship : MonoBehaviour {
         direction = new Vector3(1, 0);
         velocity = new Vector3(0, 0);
         acceleration = new Vector3(0, 0);
-        thrusters = gameObject.GetComponentInChildren<ParticleSystem>();
-        thrusters.Stop();
+        thrusterParticles.Stop();
+        orientationParticles.Stop();
         //fmodEmitter = GetComponent<StudioEventEmitter>();
 	}
 	
@@ -99,36 +100,51 @@ public class Ship : MonoBehaviour {
     void Turning()
     {
         int turnVal = 0;
+        ParticleSystem.ShapeModule shape = orientationParticles.shape;
 
         if (Input.GetKey(KeyCode.E))
         {
             turnVal = 1;
             direction = Quaternion.Euler(0, 0, -turnSpeed / 2) * direction;
+            shape.rotation = new Vector3(270, 90, 0);
         }
         if (Input.GetKey(KeyCode.Q))
         {
             turnVal = 1;
             direction = Quaternion.Euler(0, 0, turnSpeed / 2) * direction;
+            shape.rotation = new Vector3(90, 90, 0);
         }
         if (Input.GetKey(KeyCode.D))
         {
             turnVal = 2;
             direction = Quaternion.Euler(0, 0, -turnSpeed) * direction;
+            shape.rotation = new Vector3(270, 90, 0);
         }
         if (Input.GetKey(KeyCode.A))
         {
             turnVal = 2;
             direction = Quaternion.Euler(0, 0, turnSpeed) * direction;
+            shape.rotation = new Vector3(90, 90, 0);
         }
 
         orientationFMOD.SetParameter("Turning", turnVal);
 
-        if (orientationFMOD.IsPlaying() && turnVal == 0)
-        {
-            orientationFMOD.Stop();
-        }else if (!orientationFMOD.IsPlaying() && turnVal > 0)
+        if (!orientationFMOD.IsPlaying() && turnVal > 0)
         {
             orientationFMOD.Play();
+        }else if (turnVal == 0)
+        {
+            orientationFMOD.Stop();
+        }
+
+        if (turnVal > 0 && !orientationParticles.isPlaying)
+        {
+            orientationParticles.Play();
+        }
+        
+        if (turnVal == 0)
+        {
+            orientationParticles.Stop();
         }
     }
 
@@ -140,30 +156,30 @@ public class Ship : MonoBehaviour {
         {
             speed += deltaSpeed;
             accelerationDirection = direction;
-            thrusters.Play();
+            thrusterParticles.Play();
             if (!thrusterFMOD.IsPlaying())
             {
                 thrusterFMOD.Play();
             }
-            ParticleSystem.ShapeModule shape = thrusters.shape;
+            ParticleSystem.ShapeModule shape = thrusterParticles.shape;
             shape.rotation = new Vector3(0, 0);
         }
         if (Input.GetKey(KeyCode.S))
         {
             speed -= deltaSpeed;
             accelerationDirection = direction;
-            thrusters.Play();
+            thrusterParticles.Play();
             if (!thrusterFMOD.IsPlaying())
             {
                 thrusterFMOD.Play();
             }
-            ParticleSystem.ShapeModule shape = thrusters.shape;
+            ParticleSystem.ShapeModule shape = thrusterParticles.shape;
             shape.rotation = new Vector3(180, 0);
         }
 
         if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S))
         {
-            thrusters.Stop();
+            thrusterParticles.Stop();
             thrusterFMOD.Stop();
         }
     }

@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Asteroid.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\CloseGame.cs" />
     <Compile Include="Assets\Scripts\Collision Behaviors\AsteroidCollision.cs" />
     <Compile Include="Assets\Scripts\Collision Behaviors\BulletCollision.cs" />
     <Compile Include="Assets\Scripts\Collision Behaviors\CollisionBehavior.cs" />

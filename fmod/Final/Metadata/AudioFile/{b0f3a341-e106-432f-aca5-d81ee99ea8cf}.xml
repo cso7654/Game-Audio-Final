@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{b0f3a341-e106-432f-aca5-d81ee99ea8cf}">
+		<property name="assetPath">
+			<value>Synth Chord 3.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>16.844875283446711</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c3aab086-b964-4c1d-92a4-a5790eb5881b}</destination>
+		</relationship>
+	</object>
+</objects>

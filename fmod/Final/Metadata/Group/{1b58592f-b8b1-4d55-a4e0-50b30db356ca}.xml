@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{1b58592f-b8b1-4d55-a4e0-50b30db356ca}">
+		<property name="name">
+			<value>Ship Engines</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{03022c77-e39e-42e2-bef4-b1f820e448f3}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{55cd1875-68c9-432e-a72f-70d0af12eed0}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{385fe4c6-94b6-429d-ad6b-79fc258072ce}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{03022c77-e39e-42e2-bef4-b1f820e448f3}">
+		<relationship name="effects">
+			<destination>{132b3f4c-3036-43b4-8dc0-26dcf6fb636a}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{55cd1875-68c9-432e-a72f-70d0af12eed0}" />
+	<object class="MixerBusFader" id="{132b3f4c-3036-43b4-8dc0-26dcf6fb636a}" />
+</objects>
