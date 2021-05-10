@@ -123,7 +123,7 @@ MonoBehaviour:
   Path: ../../fmod/Final/Build/Desktop/Ambeance.bank
   Name: Ambeance
   StudioPath: bank:/Ambeance
-  lastModified: 637550617277613229
+  lastModified: 637561982847669257
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -329,7 +329,7 @@ MonoBehaviour:
   Path: ../../fmod/Final/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637550617276502190
+  lastModified: 637561982848408334
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -355,6 +355,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-4704499841759681553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient Damage Noises/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-4696902059812716136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,7 +432,7 @@ MonoBehaviour:
   Path: ../../fmod/Final/Build/Desktop/Damage.bank
   Name: Damage
   StudioPath: bank:/Damage
-  lastModified: 637550617276323645
+  lastModified: 637561982848304440
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -459,6 +479,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-3238067741691429172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Orientation Thrusters/Turning
+  m_EditorClassIdentifier: 
+  Name: Turning
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-2711350262881193572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,6 +521,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 4500
+--- !u!114 &-2290647352016713762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Main Thrusters/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-2275180338100061242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,7 +579,7 @@ MonoBehaviour:
   Path: ../../fmod/Final/Build/Desktop/Projectiles.bank
   Name: Projectiles
   StudioPath: bank:/Projectiles
-  lastModified: 637550617276725389
+  lastModified: 637561982848631468
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -644,7 +704,7 @@ MonoBehaviour:
   - {fileID: 3548787782141631527}
   StringsBanks:
   - {fileID: -5773422985526777125}
-  stringsBankWriteTime: 637550617276502190
+  stringsBankWriteTime: 637561982848408334
   cacheVersion: 6
 --- !u!114 &354662367593843631
 MonoBehaviour:
@@ -686,7 +746,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 4518823648567906198}
+  - {fileID: 3335721188980682562}
   MinDistance: 0
   MaxDistance: 0
   Length: 436
@@ -819,7 +879,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 7933018878802445299}
+  - {fileID: -3238067741691429172}
   MinDistance: 0
   MaxDistance: 0
   Length: 1034
@@ -925,6 +985,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &3335721188980682562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Main Thrusters/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &3546965681475697591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -944,7 +1024,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &3548787782141631527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -960,7 +1040,7 @@ MonoBehaviour:
   Path: ../../fmod/Final/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637550617276417895
+  lastModified: 637561982848363631
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -979,7 +1059,7 @@ MonoBehaviour:
   Path: ../../fmod/Final/Build/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
-  lastModified: 637550617277305718
+  lastModified: 637561982849187006
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1131,6 +1211,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &4216795527574411676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient Damage Noises/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &4220399829389253403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1193,7 +1293,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &4540243190584042741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1334,7 +1434,7 @@ MonoBehaviour:
   Path: ../../fmod/Final/Build/Desktop/Asteroids.bank
   Name: Asteroids
   StudioPath: bank:/Asteroids
-  lastModified: 637550617275897077
+  lastModified: 637561982847951969
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1378,6 +1478,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &7467392680401083006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Orientation Thrusters/Turning
+  m_EditorClassIdentifier: 
+  Name: Turning
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &7572613319129680749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1443,7 +1563,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &8367886037234279338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1464,7 +1584,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 3546965681475697591}
+  - {fileID: -4704499841759681553}
   MinDistance: 0
   MaxDistance: 0
   Length: 1300
@@ -1523,7 +1643,7 @@ MonoBehaviour:
   Path: ../../fmod/Final/Build/Desktop/Thrusters.bank
   Name: Thrusters
   StudioPath: bank:/Thrusters
-  lastModified: 637550617277037905
+  lastModified: 637561982848919189
   LoadResult: 0
   FileSizes: []
   Exists: 1
